@@ -38,6 +38,36 @@ body {
       color:cornflowerblue;
   }
 
-  footer {
-      color: gray;
+  header, main, footer {
+      border: 2px solid grey;
+      margin: 5px auto;
+      width: 900px;
+      padding: 5px 10px;
+  }
+
+  .navi {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      overflow: hidden;
+        background-color: darkgray;
+  }
+
+  .nav-button {
+      float: left;
+  }
+
+  .nav-button > a {
+      display: block;
+      color: black;
+      text-decoration: none;
+      text-align: center;
+      text-transform: uppercase;
+      font-family: 'Krub', sans-serif;
+      padding: 10px 15px;
+    }
+
+  .nav-button > a:hover {
+      background-color: cadetblue;
+      color: blanchedalmond;
   }
