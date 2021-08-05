@@ -1,0 +1,43 @@
+body { 
+        color: rgb(39, 116, 126);
+        background-color: beige;
+  }
+
+   .black-border {
+        border: 5px dotted rgb(233, 240, 255);
+        background-color: cornflowerblue;
+  }
+  
+   #green-background {
+        background-color: rgb(221, 174, 112);
+  }
+
+   header > nav > a{
+      color:white;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-family: 'Krub', sans-serif;
+  }
+
+  header > nav > a:hover {
+      color: pink;
+  }
+
+  .about {
+      background-color: cornflowerblue;
+      color: white;
+  }
+
+  .groentes {
+      background-color: pink;
+      color: cornflowerblue;
+  }
+
+  .fruit {
+      background-color: red;
+      color:cornflowerblue;
+  }
+
+  footer {
+      color: gray;
+  }
