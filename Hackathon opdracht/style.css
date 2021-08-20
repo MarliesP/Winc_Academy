@@ -1,0 +1,126 @@
+.fullscreen-bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+  }
+  
+  .fullscreen-bg__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (min-aspect-ratio: 16/9) {
+    .fullscreen-bg__video {
+      height: 300%;
+      top: -100%;
+    }
+  }
+  @media (max-aspect-ratio: 16/9) {
+    .fullscreen-bg__video {
+      width: 300%;
+      left: -100%;
+    }
+  }
+
+  @media (max-width: 767px) {
+
+    video {
+      display: none;
+    }
+
+    .fullscreen-bg {
+      background: url('Images/Yoga_Eline_home.jpg') center center / cover no-repeat;
+    }
+  }
+
+  .home {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -100px;
+    background-color: cadetblue;
+  }
+
+  .home-image{
+    padding: 50px;
+  }
+
+.topnav {
+  background-color: cadetblue;
+  overflow: hidden;
+  position: relative;
+}
+.topnav #menu-yoga {
+  display: none;
+}
+
+.topnav a {
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 14px 16px;
+  display: block;
+  text-align: right;
+  font-family: "Roboto", sans-serif;
+}
+
+.topnav a.icon {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.icon > .fa {
+  font-size: 2em;
+  color: white;
+  padding: 14px;
+}
+
+#menu-yoga a:hover{
+  background-color: white;
+  color: cadetblue;
+  height: inherit;
+}
+
+@media screen and (min-width: 768px) {
+
+  .topnav a.icon {
+    display: none;
+  }
+  
+  .topnav {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .topnav figure {
+    display: flex;
+    flex: 1;
+  }
+
+  .topnav #menu-yoga {
+    display: flex;
+    flex: 3;
+    align-items: center;
+    justify-content: flex-end;
+    height: 80px;
+  }
+   
+  .topnav a {
+  display: flex;
+  align-items: center;
+  }
+
+  #menu-yoga a:hover {
+    height: inherit;
+  }
+}
