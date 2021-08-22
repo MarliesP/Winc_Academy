@@ -57,9 +57,11 @@
   background-color: cadetblue;
   overflow: hidden;
   position: relative;
+  display: flex;
 }
 .topnav #menu-yoga {
   display: none;
+  width: 100%;
 }
 
 .topnav a {
@@ -70,6 +72,11 @@
   display: block;
   text-align: right;
   font-family: "Roboto", sans-serif;
+}
+
+.active {
+  background-color: darkcyan;
+  height: inherit;
 }
 
 .topnav a.icon {
@@ -91,6 +98,78 @@
   height: inherit;
 }
 
+.bigscreen {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 100%;
+}
+
+.header-logo {
+  place-self: flex-start;
+}
+
+.topnav > .bigscreen> .header-logo > a {
+  padding: 0;
+}
+
+.contentborder {
+  border: solid 2px cadetblue;
+  padding: 20px;
+  margin-top: 5px;
+}
+
+h2, p {
+  font-family: "Roboto", sans-serif;
+  color: cadetblue;
+}
+
+h2 {
+  text-transform: uppercase;
+  margin: 0;
+}
+table {
+  width: 100%;
+}
+
+input, textarea {
+  border: solid 1px cadetblue;
+  font-family: "Roboto", sans-serif;
+}
+
+input:focus-visible, textarea:focus-visible {
+  border: solid 2px cadetblue;
+  outline: cadetblue;
+}
+
+#verzend-knop {
+  background-color: cadetblue;
+  color: white;
+  text-transform: uppercase;
+}
+
+footer {
+  height: 50px;
+  background-color: white;
+  bottom: 0;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+footer > p {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  color: cadetblue;
+}
+
+footer > P > a > .fa {
+  padding: 0 10px;
+  color: cadetblue;
+}
+
 @media screen and (min-width: 768px) {
 
   .topnav a.icon {
@@ -100,6 +179,14 @@
   .topnav {
     display: flex;
     flex-direction: row;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .bigscreen {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
   }
 
   .topnav figure {
@@ -123,4 +210,30 @@
   #menu-yoga a:hover {
     height: inherit;
   }
+}
+
+td:first-of-type {
+  width: 25%;
+}
+
+td, input, textarea {
+  width: 75%;
+}
+
+@media screen and (min-width: 1200px) {
+
+  .bigscreen {
+    width: 75%;
+  }
+
+  main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .contentborder {
+    width: 75%;
+  }
+
 }

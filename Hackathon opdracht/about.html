@@ -7,6 +7,7 @@
         <meta name="description" content="Yoga met Eline, yin yoga in Den Haag">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="shortcut icon" href="Images/FavEN.png" type="image/x-icon">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
@@ -15,18 +16,20 @@
 
     <body>
         <header class="topnav">
+            <div class="bigscreen">
             <figure class="header-logo">
-                <img src="Images/YogaEline.svg" alt="Logo yoga met Eline">
+                <a href="about.html"><img src="Images/YogaEline.svg" alt="Logo yoga met Eline"></a>
             </figure>
             <nav id="menu-yoga">
-                    <a href="about.html">About</a>
+                    <a class="active" href="about.html">About</a>
                     <a href="yinyoga.html">Yin Yoga</a>
                     <a href="lessen.html">Lessen</a>
                     <a href="contact.html">Contact</a>
             </nav>
-            <a class="icon" onclick="showMenu()">
+            <a class="icon" id="navButton">
                 <i class="fa fa-bars"></i>
             </a>
+        </div>
         </header>
 
             <main>
@@ -35,18 +38,10 @@
             </main>
 
             <footer>
-
+                <p>Yoga met Eline<a href="mailto:info@yogameteline.nl"><i class="fa fa-envelope-o"></i></a></p>
             </footer>
 
-            <script>
-                function showMenu() {
-                    let x = document.getElementById("menu-yoga");
-                    if (x.style.display === "block") {
-                        x.style.display = "none";
-                    } else {
-                        x.style.display = "block";
-                    }
-                }
-            </script>
+            <script src="main.js"></script>
+
     </body>
 </html>

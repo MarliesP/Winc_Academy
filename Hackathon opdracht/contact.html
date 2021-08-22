@@ -7,6 +7,7 @@
         <meta name="description" content="Neem contact op met Yoga met Eline, yin yoga in Den Haag">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="shortcut icon" href="Images/FavEN.png" type="image/x-icon">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
@@ -15,38 +16,67 @@
 
     <body>
         <header class="topnav">
-            <figure class="header-logo">
-                <img src="Images/YogaEline.svg" alt="Logo yoga met Eline">
-            </figure>
-            <nav id="menu-yoga">
-                    <a href="about.html">About</a>
-                    <a href="yinyoga.html">Yin Yoga</a>
-                    <a href="lessen.html">Lessen</a>
-                    <a href="contact.html">Contact</a>
-            </nav>
-            <a class="icon" onclick="showMenu()">
-                <i class="fa fa-bars"></i>
-            </a>
+            <div class="bigscreen">
+                <figure class="header-logo">
+                    <a href="about.html"><img src="Images/YogaEline.svg" alt="Logo yoga met Eline"></a>
+                </figure>
+                    <nav id="menu-yoga">
+                            <a href="about.html">About</a>
+                            <a href="yinyoga.html">Yin Yoga</a>
+                            <a href="lessen.html">Lessen</a>
+                            <a class="active" href="contact.html">Contact</a>
+                    </nav>
+                <a class="icon" id="navButton">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
         </header>
 
             <main>
+                <section class="contentborder">
 
-                
+                    <h2>Contact</h2>
+                    <p>Wilt u meer informatie over Yoga met Eline? Vul dan onderstaand contactformulier in.</p>
+
+
+                  <form name="contactNauta" method="POST" data-netlify="true">
+                <table>
+                    <tr>
+                      <td><p><label for="vanaam">Uw voor- en achternaam:</label></p></td>
+                      <td><input required id="vanaam" name="vanaam"></td>
+                    </tr>
+
+                    <tr>
+                      <td><p><label for="telnr">Uw telefoonnummer:</label></p></td>
+                      <td><input type="tel" id="telnr" pattern="[0-9]{10}" title="Een telefoonnummer bestaat uit 10 cijfers, zonder spaties." name="telnr" placeholder="0610141149" size="10"></td>
+                    </tr>
+
+                    <tr>
+                      <td><p><label for="email">Uw mailadres:</label></p></td>
+                      <td><input required type="email" id="email" name="email" placeholder="voorbeeld&commat;hotmail.com"></td>
+                    </tr>
+
+                    <tr>
+                      <td><p><label for="vraag">Uw vraag:</label></p></td>
+                      <td><textarea required id="vraag" name="vraag" rows="10"></textarea></td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td id="versturen"><input id="verzend-knop" type="submit" value="Versturen"></td>
+                    </tr>
+                  </table>
+                </form>
+
+
+                </section>
             </main>
 
             <footer>
-
+                <p>Yoga met Eline<a href="mailto:info@yogameteline.nl"><i class="fa fa-envelope-o"></i></a></p>
             </footer>
 
-            <script>
-                function showMenu() {
-                    let x = document.getElementById("menu-yoga");
-                    if (x.style.display === "block") {
-                        x.style.display = "none";
-                    } else {
-                        x.style.display = "block";
-                    }
-                }
-            </script>
+            <script src="main.js"></script>
+
     </body>
 </html>
