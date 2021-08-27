@@ -98,11 +98,23 @@
   height: inherit;
 }
 
+main {
+margin-bottom: 60px;
+}
+
 .bigscreen {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   width: 100%;
+}
+
+.bigscreen-main {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 100%;
+  margin: 5px 0;
 }
 
 .header-logo {
@@ -119,6 +131,64 @@
   margin-top: 5px;
 }
 
+.head-image {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 0 5px 0;
+}
+
+.content-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: solid 1px cadetblue;
+  padding: 0;
+  margin: 0;
+  width: 99.5%;
+}
+
+.content-box > hr {
+  width: 100%;
+  border: solid 0.5px cadetblue;
+  margin: 0;
+}
+
+.content-box > p {
+  place-self: flex-start;
+  margin: 10px 5px;
+}
+
+.les1 {
+  background-image: url("Images/Yin_yoga.jpg");
+}
+
+.les2 {
+  background-image: url("Images/About.jpg");
+}
+
+.les1, .les2 {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 250px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 5px 0;
+}
+
+.les1 > a, .les2 > a {
+  text-decoration: none;
+}
+
+.les1 > a > p, .les2 > a > p {
+  background-color: white;
+  padding: 15px;
+}
+
 h2, p {
   font-family: "Roboto", sans-serif;
   color: cadetblue;
@@ -126,8 +196,9 @@ h2, p {
 
 h2 {
   text-transform: uppercase;
-  margin: 0;
+  margin: 5px;
 }
+
 table {
   width: 100%;
 }
@@ -189,6 +260,13 @@ footer > P > a > .fa {
     width: 100%;
   }
 
+  .bigscreen-main {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 5px 0;
+  }
+
   .topnav figure {
     display: flex;
     flex: 1;
@@ -210,20 +288,66 @@ footer > P > a > .fa {
   #menu-yoga a:hover {
     height: inherit;
   }
-}
 
-td:first-of-type {
-  width: 25%;
-}
+  main {
+    display: flex;
+    flex-direction: row;
+  }
 
-td, input, textarea {
-  width: 75%;
+  .head-image {
+    width: 50%;
+    margin: 0 5px 0 0;
+    height: 100%;
+  }
+
+  .head-image > img {
+    height: 100%;
+    width: auto;
+  }
+
+  .content-box {
+    width: 50%;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+
+  .les1, .les2 {
+    width: 25%;
+    margin: 0 0 0 5px;
+  }
+
+  .content-box > P {
+    margin: 10px 15px;
+  }
+
+  .contentborder {
+    width: 100%;
+  }
+
+  td:first-of-type {
+    width: 25%;
+  }
+
+  td, input, textarea {
+    width: 75%;
+  }
 }
 
 @media screen and (min-width: 1200px) {
 
   .bigscreen {
     width: 75%;
+    margin: 5px 0;
+  }
+
+  .bigscreen-main {
+    width: 75%;
+    margin: 5px 0 ;
+  }
+
+  .head-image {
+    height: 100%;
   }
 
   main {
