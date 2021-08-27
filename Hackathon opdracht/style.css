@@ -136,6 +136,12 @@ margin-bottom: 60px;
   flex-direction: column;
   width: 100%;
   margin: 0 0 5px 0;
+  height: auto;
+}
+
+.head-image > img {
+  height: auto;
+  width: 100%;
 }
 
 .content-box {
